@@ -1,15 +1,15 @@
 # CS5105N-Manlangit-Lukas-cooking_blasters
-Cooking blasters is a rpg roguelike inspired by dave the diver, vampire survivors, and stardew valley. 
+#### Cooking blasters is a rpg roguelike inspired by dave the diver, vampire survivors, and stardew valley. 
 
-## Activity 1 Documentation  
-### 1. Adding a 2d Node and Sprite
-![Project Screenshot](PROJECT%20DOCUMENTATION/act_1-1.png)
+## [Week 1 Documentation](PROJECT%20DOCUMENTATION/Week%201/week1.md)
+![Project Screenshot](PROJECT%20DOCUMENTATION/Week%201/act_1-1.png)
 
-### 2. Initializing Repo and Installing Git Large File system 
-![Project Screenshot](PROJECT%20DOCUMENTATION/act_1-2.png) 
+--- 
 
-### 3. Committing Changes  
-![Project Screenshot](PROJECT%20DOCUMENTATION/act_1-3.png)  
+## [Week 2 Documentation](PROJECT%20DOCUMENTATION/Week%202/week2.md) 
+![Project Screenshot](PROJECT%20DOCUMENTATION/Week%202/act_2-1.png) 
 
-### 4. Pushing changes to repo on Github 
-![Project Screenshot](PROJECT%20DOCUMENTATION/act_1-4.png)  
+---
+
+## [Week 3 Documentation](PROJECT%20DOCUMENTATION/Week%203/week3.md) 
+![Project Screenshot](PROJECT%20DOCUMENTATION/Week%203/act_3-1.png) 
