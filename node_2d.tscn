@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bu1f5ku62qcua"]
+
+[ext_resource type="Texture2D" uid="uid://d20bi3f06kjbb" path="res://wenomachainsama.PNG" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://bxuvdo8rsbcid" path="res://Scripts/Char/Movement.cs" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://dxs1rc71e0d2i" path="res://Line2d.cs" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://btlo3g82afhiy" path="res://RayCast2d.cs" id="3_epypp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]
+
+[node name="Character" type="Node2D" unique_id=2076893495]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=389287127]
+motion_mode = 1
+script = ExtResource("2_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=381185694]
+shape = SubResource("CircleShape2D_ibo6b")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=714841324]
+texture = ExtResource("1_wtcfe")
+
+[node name="Line2D" type="Line2D" parent="CharacterBody2D" unique_id=617777143]
+width = 200.0
+default_color = Color(1, 1, 0, 1)
+script = ExtResource("3_0hol4")
+
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D/Line2D" unique_id=77607682]
+script = ExtResource("3_epypp")
