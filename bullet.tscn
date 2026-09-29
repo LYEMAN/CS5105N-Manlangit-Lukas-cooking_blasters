@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://jrpxuy5d4v73"]
+
+[ext_resource type="Texture2D" uid="uid://dsoeutd8fkasv" path="res://jarona.jpg" id="1_v7oki"]
+[ext_resource type="Script" uid="uid://dw62vv31smfve" path="res://Scripts/Bullet.cs" id="1_v8qja"]
+
+[node name="Node2D" type="Node2D" unique_id=361863109]
+script = ExtResource("1_v8qja")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1676364629]
+position = Vector2(-0.49999928, 0)
+scale = Vector2(0.04166667, 0.043388434)
+texture = ExtResource("1_v7oki")
+
+[node name="RayCast2D" type="RayCast2D" parent="Sprite2D" unique_id=751893750]
+position = Vector2(11.999981, 0)
+scale = Vector2(23.999998, 23.047617)
+target_position = Vector2(0, -11)
+hit_from_inside = true

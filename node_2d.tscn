@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://d20bi3f06kjbb" path="res://wenomachainsama.PNG" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://bxuvdo8rsbcid" path="res://Scripts/Char/Movement.cs" id="2_0e48y"]
-[ext_resource type="Script" uid="uid://dxs1rc71e0d2i" path="res://Line2d.cs" id="3_0hol4"]
-[ext_resource type="Script" uid="uid://btlo3g82afhiy" path="res://RayCast2d.cs" id="3_epypp"]
+[ext_resource type="Script" uid="uid://bjjpmmhh426gq" path="res://Scripts/Line2d.cs" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://cky0wwfwom03s" path="res://Scripts/RayCast2d.cs" id="3_epypp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]
 
