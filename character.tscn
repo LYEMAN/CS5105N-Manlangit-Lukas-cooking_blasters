@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bxuvdo8rsbcid" path="res://Scripts/Char/Movement.cs" id="1_wfnr8"]
 [ext_resource type="PackedScene" uid="uid://jrpxuy5d4v73" path="res://bullet.tscn" id="2_0qfo5"]
 [ext_resource type="Texture2D" uid="uid://d20bi3f06kjbb" path="res://wenomachainsama.PNG" id="2_px5sl"]
+[ext_resource type="PackedScene" uid="uid://ditevlwsk2mok" path="res://explosion.tscn" id="5_px5sl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]
 
@@ -20,6 +21,7 @@ position = Vector2(1, 236)
 texture = ExtResource("2_px5sl")
 script = ExtResource("1_px5sl")
 bullet = ExtResource("2_0qfo5")
+explosion = ExtResource("5_px5sl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=381185694]
 shape = SubResource("CircleShape2D_ibo6b")

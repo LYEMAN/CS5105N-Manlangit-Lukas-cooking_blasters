@@ -31,7 +31,8 @@ public partial class Line2d : Line2D
 		ray_cast.ForceRaycastUpdate();
 		
 
-		marker.Position = ray_cast.TargetPosition.Normalized() * markerDistance;		ClearPoints();
+		marker.Position = ray_cast.TargetPosition.Normalized() * markerDistance;		 
+		ClearPoints();
 		AddPoint(Vector2.Zero);
 		AddPoint(ray_cast.TargetPosition);
 	}

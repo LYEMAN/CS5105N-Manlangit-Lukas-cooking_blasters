@@ -1,7 +1,7 @@
 # WEEK 2 
 
 ### 1. Core mechanic: 
-#### "Running around the map, interacting with cooking implements, parrying money to collect, and shooting finished dishes to satisfy customers" 
+#### "Running around the map and shooting finished dishes to satisfy customers" 
 #### Core Genres 
 #### - Rogue Like 
 #### - Tower Defense 
@@ -18,4 +18,8 @@
 [Step 4](act_2-4.gif);
 
 ### 5. Juice it uppppp  
-[Step 5](act_2-5.gif);
+[Step 5](act_2-5.gif); 
+
+### 6. Tweak Values 
+#### I edited the bullet speed to be 2000 pixels per second, and increased the friction for character movement. 
+

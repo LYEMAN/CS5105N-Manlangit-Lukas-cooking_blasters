@@ -2,8 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://d20bi3f06kjbb" path="res://wenomachainsama.PNG" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://bxuvdo8rsbcid" path="res://Scripts/Char/Movement.cs" id="2_0e48y"]
-[ext_resource type="Script" uid="uid://bjjpmmhh426gq" path="res://Scripts/Line2d.cs" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://dlw1015dlf6u" path="res://Scripts/Shooting.cs" id="3_0hol4"]
 [ext_resource type="Script" uid="uid://cky0wwfwom03s" path="res://Scripts/RayCast2d.cs" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://jrpxuy5d4v73" path="res://bullet.tscn" id="4_q6r6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]
 
@@ -18,11 +19,14 @@ shape = SubResource("CircleShape2D_ibo6b")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=714841324]
 texture = ExtResource("1_wtcfe")
+script = ExtResource("3_0hol4")
+bullet = ExtResource("4_q6r6c")
 
 [node name="Line2D" type="Line2D" parent="CharacterBody2D" unique_id=617777143]
-width = 200.0
+width = 8.0
 default_color = Color(1, 1, 0, 1)
-script = ExtResource("3_0hol4")
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D/Line2D" unique_id=77607682]
 script = ExtResource("3_epypp")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D" unique_id=520609345]
