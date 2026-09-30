@@ -2,27 +2,28 @@
 
 [ext_resource type="Script" uid="uid://dlw1015dlf6u" path="res://Scripts/Shooting.cs" id="1_px5sl"]
 [ext_resource type="Script" uid="uid://bxuvdo8rsbcid" path="res://Scripts/Char/Movement.cs" id="1_wfnr8"]
+[ext_resource type="PackedScene" uid="uid://jrpxuy5d4v73" path="res://bullet.tscn" id="2_0qfo5"]
 [ext_resource type="Texture2D" uid="uid://d20bi3f06kjbb" path="res://wenomachainsama.PNG" id="2_px5sl"]
-[ext_resource type="Script" uid="uid://bjjpmmhh426gq" path="res://Scripts/Line2d.cs" id="4_0qfo5"]
-[ext_resource type="Script" uid="uid://cky0wwfwom03s" path="res://Scripts/RayCast2d.cs" id="5_yxww1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]
 
 [node name="Character" type="Node2D" unique_id=2076893495]
-script = ExtResource("1_px5sl")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=389287127]
 motion_mode = 1
 script = ExtResource("1_wfnr8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=381185694]
-shape = SubResource("CircleShape2D_ibo6b")
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D" unique_id=2133829100]
+position = Vector2(1, 236)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=714841324]
 texture = ExtResource("2_px5sl")
+script = ExtResource("1_px5sl")
+bullet = ExtResource("2_0qfo5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=381185694]
+shape = SubResource("CircleShape2D_ibo6b")
 
 [node name="Line2D" type="Line2D" parent="CharacterBody2D" unique_id=617777143]
-script = ExtResource("4_0qfo5")
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D/Line2D" unique_id=77607682]
-script = ExtResource("5_yxww1")

@@ -9,7 +9,8 @@ public partial class Movement : CharacterBody2D{
 	private Vector2 direction = Vector2.Zero;
 	private float speed = Speed;  
 
-	public override void _PhysicsProcess(double delta){
+	public override void _PhysicsProcess(double delta){ 
+		//GD.Print("Movement Process is running");
 		velocity = Velocity;  
 		direction = Input.GetVector("move_left", "move_right", "move_up", "move_down"); 
 		if(direction != Vector2.Zero)
