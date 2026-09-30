@@ -9,16 +9,16 @@
 
 
 ### 2. Input Mapping 
- [Step 2](act_2-2.png); 
+ ![Project Screenshot](act_2-2.png); 
 
 ### 3. Player Scene 
-[Step 3](act_2-3.png); 
+![Project Screenshot](act_2-3.png); 
 
 ### 4. Core Mechanic 
-[Step 4](act_2-4.gif);
+![Project Screenshot](act_2-4.gif);
 
 ### 5. Juice it uppppp  
-[Step 5](act_2-5.gif); 
+![Project Screenshot](act_2-5.gif); 
 
 ### 6. Tweak Values 
 #### I edited the bullet speed to be 2000 pixels per second, and increased the friction for character movement. 
