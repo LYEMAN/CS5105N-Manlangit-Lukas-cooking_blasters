@@ -10,10 +10,67 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=389287127 groups=["Player"]]
+[sub_resource type="Animation" id="Animation_reotu"]
+resource_name = "Idle"
+length = 1.3333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6333333, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.60295784, 1.1184647), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a5ess"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wbia7"]
+resource_name = "Walk"
+length = 0.6666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.33333334, 0.56666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6599076, 1.296677), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kq7hj"]
+_data = {
+&"Idle": SubResource("Animation_reotu"),
+&"RESET": SubResource("Animation_a5ess"),
+&"Walk": SubResource("Animation_wbia7")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=389287127 node_paths=PackedStringArray("animationPlayer", "leftFootParticles", "rightFootParticles") groups=["Player"]]
 collision_mask = 8
 motion_mode = 1
 script = ExtResource("1_wfnr8")
+animationPlayer = NodePath("AnimationPlayer")
+leftFootParticles = NodePath("leftFootParticles")
+rightFootParticles = NodePath("rightFootParticles")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=2133829100]
 position = Vector2(1, 236)
@@ -39,3 +96,23 @@ Target = NodePath("..")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1129820576]
 script = ExtResource("6_0qfo5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=757901625]
+libraries/ = SubResource("AnimationLibrary_kq7hj")
+autoplay = &"Idle"
+
+[node name="leftFootParticles" type="CPUParticles2D" parent="." unique_id=1869977028]
+position = Vector2(-25, 19)
+emitting = false
+amount = 24
+emission_shape = 1
+emission_sphere_radius = 8.1
+gravity = Vector2(-100, -30)
+
+[node name="rightFootParticles" type="CPUParticles2D" parent="." unique_id=2036559722]
+position = Vector2(25, 19)
+emitting = false
+amount = 24
+emission_shape = 1
+emission_sphere_radius = 10.77
+gravity = Vector2(100, -30.33)
