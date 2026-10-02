@@ -6,12 +6,12 @@ public partial class Shooting : Sprite2D
 {
 	[Export] PackedScene bullet;
 	[Export] PackedScene explosion;
-	[Export] float speed = 2000.0f;
+	[Export] float speed = 300.0f;
 	[Export] float bps = 5.0f;
 	[Export] float bulletLifetime = 2.0f;
 
-	[Export] float lineLength = 500.0f;
-	[Export] float markerDistance = 200.0f;
+	[Export] float lineLength = 100.0f;
+	[Export] float markerDistance = 50.0f;
 
 	private float fireRate;
 	private float rateLimit = 0.0f;

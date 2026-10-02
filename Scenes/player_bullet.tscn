@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://jrpxuy5d4v73"]
+
+[ext_resource type="Texture2D" uid="uid://chjeo4ehogjdw" path="res://Assets/bday 4.jpg" id="2_nocgn"]
+[ext_resource type="Script" uid="uid://dw62vv31smfve" path="res://Scripts/Bullet.cs" id="3_1y16f"]
+[ext_resource type="Script" uid="uid://b5u72pksiy181" path="res://Scripts/Health.cs" id="3_jskx8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ibo6b"]
+radius = 16.0
+height = 46.0
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=394838537]
+collision_layer = 4
+collision_mask = 10
+gravity_scale = 0.0
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("3_1y16f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018265545]
+position = Vector2(-3.8146973e-06, -3.8146973e-06)
+scale = Vector2(0.008291673, 0.0061874995)
+texture = ExtResource("2_nocgn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653078809]
+shape = SubResource("CapsuleShape2D_ibo6b")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1588445161]
+script = ExtResource("3_jskx8")

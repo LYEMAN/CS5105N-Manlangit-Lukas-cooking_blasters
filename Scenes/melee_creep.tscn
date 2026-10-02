@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d3cnqglnw7fxc"]
+
+[ext_resource type="Script" uid="uid://ma3eofrir3nk" path="res://Scripts/meleeCreep.cs" id="1_e1gcc"]
+[ext_resource type="Script" uid="uid://b5u72pksiy181" path="res://Scripts/Health.cs" id="2_fydd0"]
+[ext_resource type="Texture2D" uid="uid://dnu8djakm6ugr" path="res://Assets/fullofsoup.png" id="2_motbu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlj2j"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=857032723]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_e1gcc")
+speed = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1674855636]
+position = Vector2(-1.9073486e-06, 0)
+scale = Vector2(0.046420578, 0.046420578)
+texture = ExtResource("2_motbu")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=280848892]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1639290060]
+shape = SubResource("RectangleShape2D_tlj2j")
+script = ExtResource("2_fydd0")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=999632766]
+shape = SubResource("RectangleShape2D_xrivr")

@@ -24,6 +24,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="cooking blasters"
 
+[global_group]
+
+Player=""
+
 [input]
 
 move_left={
@@ -59,4 +63,5 @@ shoot={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

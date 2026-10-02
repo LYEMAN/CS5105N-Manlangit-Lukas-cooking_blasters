@@ -1,6 +1,6 @@
 # CS5105N-Manlangit-Lukas-cooking_blasters
 #### Cooking blasters is a rpg roguelike inspired by dave the diver, vampire survivors, and stardew valley. 
-
+#### I want this project to be accessible, and fun for everyone, so to achieve this, I want to make soemthing both learnable and challenging. 
 ## [Week 1 Documentation](PROJECT%20DOCUMENTATION/Week%201/week1.md)
 ![Project Screenshot](PROJECT%20DOCUMENTATION/Week%201/act_1-1.png)
 
