@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d13l071b40vcj"]
+
+[ext_resource type="Script" uid="uid://c2jpnucqclpui" path="res://Scripts/InputRemapButton.cs" id="1_kshsw"]
+
+[node name="InputRemapButton" type="Button" unique_id=131814155]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_kshsw")

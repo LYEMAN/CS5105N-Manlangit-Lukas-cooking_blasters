@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://ditevlwsk2mok" path="res://Scenes/explosion.tscn" id="5_px5sl"]
 [ext_resource type="Script" uid="uid://b5u72pksiy181" path="res://Scripts/Health.cs" id="6_0qfo5"]
 [ext_resource type="Script" uid="uid://b81sulhotai5i" path="res://Scripts/Cam.cs" id="7_yxww1"]
+[ext_resource type="Script" uid="uid://bb8pqmurw8wd8" path="res://Scripts/HUD.cs" id="8_a5ess"]
+[ext_resource type="Script" uid="uid://bxw1033wva3cb" path="res://Scripts/Pause.cs" id="9_kq7hj"]
+[ext_resource type="PackedScene" uid="uid://bt3goc6sqlfw7" path="res://Scenes/Pause.tscn" id="10_7iw6i"]
+[ext_resource type="AudioStream" uid="uid://crl33vcsyqkxk" path="res://Audio/Recording.mp3" id="11_7iw6i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]
 
@@ -81,6 +85,10 @@ script = ExtResource("1_px5sl")
 bullet = ExtResource("2_0qfo5")
 explosion = ExtResource("5_px5sl")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D" unique_id=970353878]
+stream = ExtResource("11_7iw6i")
+bus = &"Shooting"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=381185694]
 shape = SubResource("CircleShape2D_ibo6b")
 
@@ -88,11 +96,6 @@ shape = SubResource("CircleShape2D_ibo6b")
 width = 1.0
 
 [node name="RayCast2D" type="RayCast2D" parent="Line2D" unique_id=77607682]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1542929732 node_paths=PackedStringArray("Target")]
-zoom = Vector2(5, 5)
-script = ExtResource("7_yxww1")
-Target = NodePath("..")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1129820576]
 script = ExtResource("6_0qfo5")
@@ -116,3 +119,22 @@ amount = 24
 emission_shape = 1
 emission_sphere_radius = 10.77
 gravity = Vector2(100, -30.33)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1542929732 node_paths=PackedStringArray("Target")]
+zoom = Vector2(3.5, 3.5)
+script = ExtResource("7_yxww1")
+Target = NodePath("..")
+
+[node name="HUD" type="CanvasLayer" parent="Camera2D" unique_id=271924658]
+layer = 10
+script = ExtResource("8_a5ess")
+
+[node name="HealthBar" type="ProgressBar" parent="Camera2D/HUD" unique_id=387520410]
+offset_left = 24.0
+offset_top = 34.0
+offset_right = 28.0
+offset_bottom = 61.0
+
+[node name="Pause" type="Node2D" parent="." unique_id=981468358]
+script = ExtResource("9_kq7hj")
+pauseScene = ExtResource("10_7iw6i")

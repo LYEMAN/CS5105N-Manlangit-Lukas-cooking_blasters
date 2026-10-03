@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bmkbd7kxqe5kj"]
+
+[ext_resource type="PackedScene" uid="uid://d13l071b40vcj" path="res://Scenes/input_remap_button.tscn" id="1_4geyq"]
+[ext_resource type="Script" uid="uid://egropo7kcd5p" path="res://Scripts/Settings.cs" id="1_i44u3"]
+
+[node name="Settings" type="Control" unique_id=601087675]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 9.0
+offset_right = 4.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i44u3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=750768782]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 188.0
+offset_right = 723.0
+offset_bottom = 420.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1832236637]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=976282752]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1616038795]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Move up"
+
+[node name="Move Up" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=131814155 instance=ExtResource("1_4geyq")]
+layout_mode = 2
+inputAction = &"move_up"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1362454329]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=628367870]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Move down"
+
+[node name="Move Down" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1186793841 instance=ExtResource("1_4geyq")]
+layout_mode = 2
+inputAction = &"move_down"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1337182127]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=373278257]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Move left"
+
+[node name="InputRemapButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=701152221 instance=ExtResource("1_4geyq")]
+layout_mode = 2
+inputAction = &"move_left"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=666437768]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=507192525]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Move right"
+
+[node name="InputRemapButton2" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=765682194 instance=ExtResource("1_4geyq")]
+layout_mode = 2
+inputAction = &"move_right"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2005825508]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1411418542]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Shoot"
+
+[node name="InputRemapButton3" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1053262538 instance=ExtResource("1_4geyq")]
+layout_mode = 2
+inputAction = &"shoot"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=467619964]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1808950668]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pause"
+
+[node name="InputRemapButton4" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1129041147 instance=ExtResource("1_4geyq")]
+layout_mode = 2
+inputAction = &"pause"
+
+[node name="Return" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1616017261]
+layout_mode = 2
+text = "Return"

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://7bkcaboc38ud" path="res://Scripts/EnemySpawner.cs" id="3_jriq2"]
 [ext_resource type="PackedScene" uid="uid://d3cnqglnw7fxc" path="res://Scenes/melee_creep.tscn" id="4_ehjmi"]
 [ext_resource type="Script" uid="uid://c0kuhrf6s4ehw" path="res://Scripts/LevelManager.cs" id="5_p4u3k"]
+[ext_resource type="AudioStream" uid="uid://dbncodvnh20l5" path="res://Audio/Ketsa - Behind in Front.mp3" id="6_jriq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jriq2"]
 texture = ExtResource("1_n3cqh")
@@ -2147,3 +2148,9 @@ shape = SubResource("RectangleShape2D_70df5")
 
 [node name="LevelManager" type="Node2D" parent="." unique_id=461460665]
 script = ExtResource("5_p4u3k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=864521941]
+stream = ExtResource("6_jriq2")
+volume_db = -10.667
+autoplay = true
+bus = &"Music"

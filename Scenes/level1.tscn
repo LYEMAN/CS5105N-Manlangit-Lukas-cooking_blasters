@@ -1323,7 +1323,7 @@ tile_set = SubResource("TileSet_xrivr")
 
 [node name="Character" parent="." unique_id=2076893495 instance=ExtResource("2_y4dr7")]
 z_index = 1
-position = Vector2(50, 52)
+position = Vector2(-12, 38)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=193274915]
 collision_layer = 0
@@ -1334,6 +1334,7 @@ waves = 2
 enemyScene = ExtResource("4_lyd6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1268058022]
+visible = false
 position = Vector2(134, 29)
 shape = SubResource("RectangleShape2D_xrivr")
 
