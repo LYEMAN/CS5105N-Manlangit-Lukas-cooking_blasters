@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://b81sulhotai5i" path="res://Scripts/Cam.cs" id="7_yxww1"]
 [ext_resource type="Script" uid="uid://bb8pqmurw8wd8" path="res://Scripts/HUD.cs" id="8_a5ess"]
 [ext_resource type="Script" uid="uid://bxw1033wva3cb" path="res://Scripts/Pause.cs" id="9_kq7hj"]
-[ext_resource type="PackedScene" uid="uid://bt3goc6sqlfw7" path="res://Scenes/Pause.tscn" id="10_7iw6i"]
+[ext_resource type="PackedScene" uid="uid://bmkbd7kxqe5kj" path="res://Scenes/settings.tscn" id="10_7iw6i"]
 [ext_resource type="AudioStream" uid="uid://crl33vcsyqkxk" path="res://Audio/Recording.mp3" id="11_7iw6i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibo6b"]

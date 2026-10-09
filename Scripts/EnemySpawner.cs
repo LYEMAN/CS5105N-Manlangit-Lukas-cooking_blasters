@@ -1,4 +1,3 @@
-
 using Godot;
 
 public partial class EnemySpawner : Area2D
@@ -8,6 +7,7 @@ public partial class EnemySpawner : Area2D
 	[Export] private int waves = 3;
 	[Export] private float waveInterval = 5.0f;
 	[Export] private PackedScene enemyScene;
+	[Export] private PackedScene rangedEnemyScene;
 	[Export] private PackedScene bossScene;
 
 	[Signal]
@@ -75,13 +75,14 @@ public partial class EnemySpawner : Area2D
 
 	private void SpawnEnemy()
 	{
-		if (enemyScene == null)
+		PackedScene selectedScene = enemyScene;
+
+		if (rangedEnemyScene != null && _random.Randf() < 0.5f)
 		{
-			GD.PrintErr("Enemy scene has not been assigned.");
-			return;
+			selectedScene = rangedEnemyScene;
 		}
 
-		Node2D enemy = enemyScene.Instantiate<Node2D>();
+		Node2D enemy = selectedScene.Instantiate<Node2D>();
 
 		enemy.AddToGroup("Enemies");
 
@@ -100,7 +101,7 @@ public partial class EnemySpawner : Area2D
 		if (rectangle == null)
 		{
 			GD.PrintErr(
-                "CollisionShape2D must use a RectangleShape2D."
+				"CollisionShape2D must use a RectangleShape2D."
 			);
 
 			return GlobalPosition;
